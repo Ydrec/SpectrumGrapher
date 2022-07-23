@@ -26,14 +26,14 @@ class ArinstDevice:
     def _write(self, command : str, *args):
         msg = command + "".join([f' {arg}' for arg in args]) + " " + str(self.__package_index) + self.__command_terminate
         self.__serial.write(bytes(msg, 'ascii'))
-        print("sent ",msg)
+        #print("sent ",msg)
         self.__package_index += 1
 
     def _read(self, command : str) -> str:
         msg = b''
         for _ in range(self.__command_count_terminate[command]):
             msg += self.__serial.read_until(bytes(self.__command_terminate, 'ascii'))
-        print("read ",msg,"\n")
+        #print("read ",msg,"\n")
         self.__serial.reset_input_buffer()
         self.__serial.reset_output_buffer()
         return msg
