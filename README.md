@@ -4,7 +4,7 @@
 ## Установка
 1. Клонируем репозиторий
 ```
-git clone https://github.com/IlyaDanilenko/SpectrumGrapher.git
+git clone https://github.com/Ydrec/SpectrumGrapher.git
 ```
 3. Устанавливаем необходимые библиотеки Python
 ```
@@ -15,6 +15,8 @@ pip install -r requirements.txt
 ## Запуск приложения
 ```
 python main.py --start [начальная частота сканирвоания] --stop [конечная частота сканирования] --step [шаг сканирования]
+или
+python main.py --file [путь к файлу лога для чтения]
 ```
 
 ## Управление
