@@ -78,7 +78,7 @@ class AmplitudeMesh:
         #В окне создается матрица пикселей из буффера с пустыми значениями для задания правильного размера
         self.mesh = self.ax0.matshow(self.buff, vmin=vmin, vmax=vmax, cmap=cmap, origin='upper', aspect='auto')
         #Смешения участка ax0, смешение вправо, вверх, ширина, высота
-        self.ax0.set_position((0.21, 0.5, 0.65, 0.75))
+        self.ax0.set_position((0.21, 0.1, 0.65, 0.75))
         self.ax0.grid(False)
 
         #Создание участка ax1 для цветовой линии
